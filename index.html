@@ -5,24 +5,31 @@
 	<meta charset="utf-8">
 	<script type="text/x-handlebars-template" id="tableTemplate">
 
-   <table class="table table-striped">
-       <tr><th>Item</th><th>Meal</th><th>Category</th><th>Portion</th></tr>
-           {{#each rows}}
-               <tr>
-                  <td>{{name}}</td><td>{{major}}</td><td>{{midterm}}</td><td>{{final}}</td>
-               </tr>
-           {{/each}}
-   </table>
-</script>
+   	<table class="table table-striped">
+        	<tr>
+		<th>Item</th>
+		<th>Meal</th>
+		<th>Category</th>
+		<th>Portion</th>
+		</tr>
+           	{{#each rows}}
+                <tr>
+                  <td>{{name}}</td>
+		  <td>{{major}}</td>
+		  <td>{{midterm}}</td>
+		  <td>{{final}}</td>
+                </tr>
+           	{{/each}}
+   	</table>
+	</script>
   
-  <!-- application ajax code -->
-<script>
+	<script>
 
 	function getData(major) {
 		var request = new XMLHttpRequest();
-    	request.open('GET', 'menu_items.json');     // open the request
+    		request.open('GET', 'menu_items.json');     // open the request
 
-    	request.onload = function() {
+    		request.onload = function() {
 
         	var data = JSON.parse(request.responseText);
 			
@@ -44,10 +51,10 @@
         	}
 		}
 
-    request.send(null);
+    	request.send(null);
   }
   
-</script>
+	</script>
 </head>
 <body>
   

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Programming Project 1 - Hannah Burdon</title>
+	
+	<script type="text/javascript">
+	
+	function salesTax() {
+		var a = document.getElementById("txtA").value; // get item cost
+		var b = document.getElementById("txtB").value; // get quantity purchased
+		var result = a * b + .06*(a * b); // show the results
+		document.getElementById("txtResult").value = result;
+	};	
+	
+	</script>
+</head>
+<body>
+
+	<form name="form1">
+		<input type="text" id="txtA"> Enter item cost<br><br>
+		<input type="text" id="txtB"> Enter quantity purchased<br><br>
+		<input type="button" value="Click for Total" onclick="salesTax()"><br><br>
+		<input type="text" id="txtResult"> Total cost with 6% tax
+	</form>
+
+</body>
+</html>

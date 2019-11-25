@@ -41,7 +41,7 @@
     		request.onload = function() {
 
         	var data = JSON.parse(request.responseText);
-		majors = data.filter(getData) 
+		majors = data.filter(getData('CIT')) 
 		
 	function getMajor(item) {
             	return item.major == major;

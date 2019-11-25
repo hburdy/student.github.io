@@ -34,7 +34,7 @@
  
 <script type="text/javascript">
 
-	function getData("CIT") {
+	function getData(major) {
 		var request = new XMLHttpRequest();
     		request.open('GET', 'cit5students.json');
 
@@ -43,7 +43,7 @@
         	var data = JSON.parse(request.responseText);
 		majors = data.filter(getMajor) 
 		
-	function getMajor(item) {
+	function getMajor('CIT') {
             	return item.major == major;
         	}
 

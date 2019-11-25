@@ -43,8 +43,8 @@
         	var data = JSON.parse(request.responseText);
 		majors = data.filter(getMajor) 
 		
-	function getMajor(major) {
-            	return item.major == major;
+	function getMajor(name) {
+            	return name.major == major;
         	}
 
         	if (request.status == 200) {

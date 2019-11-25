@@ -49,13 +49,13 @@
 
         	if (request.status == 200) {
               	var templateText = document.getElementById('tableTemplate').innerHTML;
-             	var compiledTemplateText = Handlebars.compile(templateText);   // get and compile template code
+             	var compiledTemplateText = Handlebars.compile(templateText);
               	
-              	compiledHtml = compiledTemplateText({ rows: majors })      // apply data to template
-              	document.getElementById('menuTable').innerHTML = compiledHtml; 	
+              	compiledHtml = compiledTemplateText({ rows: majors })
+              	document.getElementById('dataTable').innerHTML = compiledHtml; 	
        	 	}
         	else {
-            	document.querySelector('#menuTable').innerHTML = "There was an error, or menu items not found";
+            	document.querySelector('#dataTable').innerHTML = "There was an error, or data items not found";
         	}
 		}
 
@@ -75,16 +75,8 @@
             </div>
       
   
-           <h3>We filter our dataset by meal</h3>
-                <div id="menuTable"></div>
-                
-      
-           
-     
-     </div>   <!-- end class='container'   -->
+           <h3>We filter our dataset by major</h3>
+                <div id="dataTable"></div>
+     </div>
   </body>
-
-
-  <!-- Handlebars template -->
-
 </html>

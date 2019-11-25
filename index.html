@@ -47,7 +47,7 @@
             	return item.major == major;
         	}
 
-        	if (request.status == 200) {
+        	if (request.status == 0) {
               	var templateText = document.getElementById('tableTemplate').innerHTML;
              	var compiledTemplateText = Handlebars.compile(templateText);
               	request.open('GET', 'cit5students.json');

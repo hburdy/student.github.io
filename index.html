@@ -50,7 +50,6 @@
         	if (request.status == 200) {
               	var templateText = document.getElementById('tableTemplate').innerHTML;
              	var compiledTemplateText = Handlebars.compile(templateText);
-              	request.open('GET', 'cit5students.json');
 			
               	compiledHtml = compiledTemplateText({ rows: majors })
               	document.getElementById('dataTable').innerHTML = compiledHtml; 	

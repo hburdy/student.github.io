@@ -34,14 +34,14 @@
  
 <script type="text/javascript">
 
-	function getData('CIT') {
+	function getData(major) {
 		var request = new XMLHttpRequest();
     		request.open('GET', 'cit5students.json');
 
     		request.onload = function() {
 
         	var data = JSON.parse(request.responseText);
-		majors = data.filter(getData('CIT')) 
+		majors = data.filter(getData) 
 		
 	function getMajor(item) {
             	return item.major == major;

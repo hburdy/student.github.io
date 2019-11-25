@@ -1,32 +1,11 @@
 <!DOCTYPE html>
-<html><head>  <meta charset="UTF-8">
+<html>
+<head>  
+	<meta charset="UTF-8">
         <title>Program #5 - Hannah Burdon</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js">
 	</script>
-</head>
-<body>
-  
-     <div class="container">
-            <h2>Select a Major</h2>
-      
-            <div style='padding: 5px;'>    
-               <button type='button' class="btn btn-primary" onClick="getData('CIT)">CIT Majors</button> &nbsp; 
-               <button type='button' class="btn btn-primary" onClick="getData('BUS')">Business Majors</button> 
-            </div>
-      
-  
-           <h3>We filter our dataset by meal</h3>
-                <div id="menuTable"></div>
-                
-      
-           
-     
-     </div>   <!-- end class='container'   -->
-  </body>
-
-
-  <!-- Handlebars template -->
-<script type="text/x-handlebars-template" id="tableTemplate">
+	<script type="text/x-handlebars-template" id="tableTemplate">
 
    <table class="table table-striped">
        <tr><th>Item</th><th>Meal</th><th>Category</th><th>Portion</th></tr>
@@ -43,7 +22,7 @@
 
 	function getData(major) {
 		var request = new XMLHttpRequest();
-    	request.open('GET', 'menu_items.json');     // open the request
+    	request.open('GET', 'cit5students.json');     // open the request
 
     	request.onload = function() {
 
@@ -71,4 +50,28 @@
   }
   
 </script>
+</head>
+<body>
+  
+     <div class="container">
+            <h2>Select a Major</h2>
+      
+            <div style='padding: 5px;'>    
+               <button type='button' class="btn btn-primary" onClick="getData('CIT)">CIT Majors</button> &nbsp; 
+               <button type='button' class="btn btn-primary" onClick="getData('BUS')">Business Majors</button> 
+            </div>
+      
+  
+           <h3>We filter our dataset by meal</h3>
+                <div id="menuTable"></div>
+                
+      
+           
+     
+     </div>   <!-- end class='container'   -->
+  </body>
+
+
+  <!-- Handlebars template -->
+
 </html>

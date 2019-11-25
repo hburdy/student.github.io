@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>  
+	<title>Program #5 - Hannah Burdon</title>
 	<meta charset="UTF-8">
-        <title>Program #5 - Hannah Burdon</title>
+        
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    	</script>
+    	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
+    	</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js">
 	</script>
 	<script type="text/x-handlebars-template" id="tableTemplate">
 
-   <table class="table table-striped">
-       <tr><th>Item</th><th>Meal</th><th>Category</th><th>Portion</th></tr>
-           {{#each rows}}
+   		 <table class="table table-striped">
+       			<tr><th>Item</th><th>Meal</th><th>Category</th><th>Portion</th></tr>
+          	 	{{#each rows}}
                <tr>
                   <td>{{name}}</td><td>{{major}}</td><td>{{midterm}}</td><td>{{final}}</td>
                </tr>
            {{/each}}
-   </table>
-</script>
+  		 </table>
+	</script>
   
-  <!-- application ajax code -->
-<script>
+ 
+<script type="text/javascript">
 
 	function getData(major) {
 		var request = new XMLHttpRequest();

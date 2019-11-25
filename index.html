@@ -43,7 +43,7 @@
         	var data = JSON.parse(request.responseText);
 		majors = data.filter(getMajor) 
 		
-	function getMajor(item) {
+	function getData('BUS') {
             	return item.major == major;
         	}
 
@@ -68,16 +68,16 @@
 <body>
   
      <div class="container">
-            <h2>Select a Major</h2>
+            <h1>Select a Major</h1>
       
             <div style='padding: 5px;'>    
                <button type='button' class="btn btn-primary" onClick="getData('CIT)">CIT Majors</button> &nbsp; 
                <button type='button' class="btn btn-primary" onClick="getData('BUS')">Business Majors</button> 
             </div>
       
-  
            <h3>We filter our dataset by major</h3>
-                <div id="dataTable"></div>
+           <div id="dataTable">
+	   </div>
      </div>
   </body>
 </html>

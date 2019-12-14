@@ -73,10 +73,10 @@
 		
 		var url = "students.json";
           	$http.get(url).then(function (response) {
-                $scope.student = response.data; 
-          		});
+                $scope.students = response.data; 
+          		};
 
-		});
+		};
 	
 	</script>
 		

@@ -23,6 +23,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
     </script>
 	
+    <script type="text/javascript">
+		
+		var app = angular.module('studentsApp', []);
+		app.controller('allCtrl', function($scope, $http) {
+  
+          	$http.getJSON("students.json")     
+          	.then(function (response) {
+                $scope.students = response.data; 
+          		});
+
+		});
+	
+     </script>
 	
 </head>
 <body ng-app="studentsApp">
@@ -66,19 +79,6 @@
       </div>
     </div>
 	
-	<script type="text/javascript">
-		
-		var app = angular.module('studentsApp', []);
-		app.controller('allCtrl', function($scope, $http) {
-  
-          	$http.getJSON("students.json")     
-          	.then(function (response) {
-                $scope.students = response.data; 
-          });
-
-		});
-	
-	</script>
 		
 
 </body>

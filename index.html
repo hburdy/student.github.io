@@ -16,55 +16,42 @@
 	</style>
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
-    	</script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+        </script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js">
 	</script> 
-    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
-    	</script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
+        </script>
 	
-    	<script type="text/javascript">
-		
-		var app = angular.module('studentsApp', []);
-		app.controller('allCtrl', function($scope, $http) {
-		
-		var url = "students.json";
-                $http.get(url).then(function (response) {
-                $scope.students = response.data; 
-          		});
-
-		});
-	
-	</script>
 	
 </head>
 <body ng-app="studentsApp">
 
-    <div class="container">
+<div class="container">
     <nav class="navbar navbar-inverse">
     <div class="navbar-header">
          <a class="navbar-brand" href="#">Our Website</a>
-    </div>
-    <div>
-         <ul class="nav navbar-nav">
-             <li class="active"><a href="index.html">All Advisees</a></li>
-             <li><a href="gpa.html">Grade Point Averages</a></li>
-         </ul>
-    </div>
-    </nav>
+</div>
+<div>
+     <ul class="nav navbar-nav">
+         <li class="active"><a href="index.html">All Advisees</a></li>
+         <li><a href="gpa.html">Grade Point Averages</a></li>
+     </ul>
+ </div>
+ </nav>
 	
-	<div ng-controller = "allCtrl">
+<div ng-controller = "allCtrl">
 
     <h1>Advisees</h1>
        <p><input type='text' ng-model='search_text' > Enter Search text</p>
        <table class="table table-bordered table-striped">
            <tr>
              <th>sid</th>
-			 <th>last name</th>
-			 <th>first name</th>
-			 <th>credit hrs</th>
-			 <th>gpa points</th>
-			 <th>major</th>
+	     <th>last name</th>
+	     <th>first name</th>
+	     <th>credit hrs</th>
+	     <th>gpa points</th>
+	     <th>major</th>
            </tr>
   
            <tr ng-repeat = "student in students | filter:search_text">
@@ -79,6 +66,19 @@
       </div>
     </div>
 	
+	<script type="text/javascript">
+		
+		var app = angular.module('studentsApp', []);
+		app.controller('allCtrl', function($scope, $http) {
+		
+		var url = "students.json";
+          	$http.get(url).then(function (response) {
+                $scope.student = response.data; 
+          		});
+
+		});
+	
+	</script>
 		
 
 </body>

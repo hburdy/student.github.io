@@ -27,15 +27,15 @@
 		
 		var app = angular.module('studentsApp', []);
 		app.controller('allCtrl', function($scope, $http) {
-  
-          	$http.getJSON("students.json")     
-          	.then(function (response) {
+		
+		var url = "students.json";
+                $http.get(url).then(function (response) {
                 $scope.students = response.data; 
           		});
 
 		});
 	
-     	</script>
+	</script>
 	
 </head>
 <body ng-app="studentsApp">
